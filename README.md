@@ -1,30 +1,59 @@
-# React + TypeScript + Vite
+# Interactive Quiz Platform with Leaderboards
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern quiz application where users can participate in quizzes across various categories and compete for top positions on the leaderboard, while admins can easily create and manage quiz content.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Clean, Intuitive UI**: Vibrant blue color scheme featuring a home dashboard, quiz creation interface, and competitive leaderboard
+- **Admin Panel**: Create quizzes with customizable settings (question types, time limits, categories)
+- **Leaderboard System**: Filter options (Local/Global/Friends) showing top performers with profile pictures and scores
+- **Category Organization**: Quizzes organized by categories (Science, Geography, Sports, Biology) with visual icons
+- **User Authentication**: Personalized welcome screens and progress tracking
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React with TypeScript
+- Vite for fast development and building
+- Tailwind CSS for styling
+- Supabase for backend and authentication
+- React Router for navigation
+- Shadcn UI components
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Project Structure
+
+- `/src/components/auth`: Authentication components
+- `/src/components/dashboard`: Dashboard UI components
+- `/src/components/quiz`: Quiz-related components
+- `/src/components/ui`: Reusable UI components
+- `/src/contexts`: React context providers
+- `/src/lib`: Utility functions and services
+
+## Database Schema
+
+The application uses Supabase with tables for:
+- Users/Profiles
+- Categories
+- Quizzes
+- Questions
+- User Scores/Progress
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
